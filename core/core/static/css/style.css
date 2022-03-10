@@ -14,6 +14,13 @@
     top       : 40px;
 }
 
+#jamal {
+   position: absolute;
+    margin-left: 100px;
+
+    float  : right;
+}
+
 #colorset {
     position  : absolute;
     left      : 0px;
