@@ -1,4 +1,9 @@
 var canvas = document.getElementById("paint");
+
+// var devpaint = document.getElementById("devpaint");
+
+
+
 var ctx = canvas.getContext("2d");
 var width = canvas.width, height = canvas.height;
 var curX, curY, prevX, prevY;
@@ -262,5 +267,9 @@ function words(){
 // var c = document.getElementById("myCanvas");
 // var ctx = c.getContext("2d");
 ctx.font = "200px Arial";
-ctx.strokeText("G",canvas.width/2, canvas.height/2);
+console.log( " canvas width  ", canvas.width);
+console.log( " canvas height  ", canvas.height);
+ctx.strokeText("G",canvas.width/3, canvas.height/2);
+
+
 }
