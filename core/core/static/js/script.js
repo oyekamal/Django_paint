@@ -255,3 +255,12 @@ function save (){
     alert(filename + " saved");
     
 } 
+
+
+function words(){
+    reset()
+// var c = document.getElementById("myCanvas");
+// var ctx = c.getContext("2d");
+ctx.font = "200px Arial";
+ctx.strokeText("G",canvas.width/2, canvas.height/2);
+}
