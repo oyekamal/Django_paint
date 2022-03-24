@@ -9,342 +9,385 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-2">
-            <!--   left side menu start           -->
+        <div class="row">
+                <div class="col-md-2">
+                        <!--   left side menu start           -->
 
 
-            <div class="container">
-                <div class="row flex-md-column">
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: center;" class="btn btn-primary"
-                            onclick="pencil()">Pencil</button>
+                        <div class="container">
+                                <div class="row flex-md-column">
+                                        <!-- <div class="col">
+                                                <button type="button" style="width: 100%; text-align: center;"
+                                                        class="btn btn-primary" onclick="pencil()">Pencil</button>
 
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: center;" class="btn btn-primary"
-                            onclick="line()">Line</button>
+                                        </div>
+                                        <div class="col">
+                                                <button type="button" style="width: 100%; text-align: center;"
+                                                        class="btn btn-primary" onclick="line()">Line</button>
 
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: center;" class="btn btn-primary"
-                            onclick="rectangle()">Rectangel</button>
+                                        </div>
+                                        <div class="col">
+                                                <button type="button" style="width: 100%; text-align: center;"
+                                                        class="btn btn-primary" onclick="rectangle()">Rectangel</button>
 
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: center;" class="btn btn-primary"
-                            onclick="words()">Circle</button>
+                                        </div>
+                                        <div class="col">
+                                                <button type="button" style="width: 100%; text-align: center;"
+                                                        class="btn btn-primary" onclick="circle()">Circle</button>
 
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: center;" class="btn btn-primary"
-                            onclick="eraser()">Eraser</button>
+                                        </div>
+                                        <div class="col">
+                                                <button type="button" style="width: 100%; text-align: center;"
+                                                        class="btn btn-primary" onclick="eraser()">Eraser</button>
+
+                                        </div>
+
+                                         -->
+                                        <div class="col">
+                                                <button type="button" style="width: 100%; text-align: center;"
+                                                        class="btn btn-primary" onclick="reset()">Reset</button>
+
+                                        </div>
+
+                                </div>
+                        </div>
 
 
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: center;" class="btn btn-primary"
-                            onclick="reset()">Reset</button>
-
-                    </div>
-
+                        <!--   left side menu end           -->
                 </div>
-            </div>
+                <div id="devpaint" class="col-md-8" style="border: 5px solid #000000;">
+                        <!--   canvas start  -->
 
-
-            <!--   left side menu end           -->
-        </div>
-        <div id="devpaint" class="col-md-8" style="border: 5px solid #000000;">
-            <!--   canvas start  -->
-
-            <!-- <canvas id="paint" height="100%" width="100" style="border: 5px solid #ffff1c;">Update
+                        <!-- <canvas id="paint" height="100%" width="100" style="border: 5px solid #ffff1c;">Update
                 your browser to support
                 HTML5 Canvas</canvas> -->
-            <div class="embed-responsive embed-responsive-1by1 text-center">
-                <canvas width="500%" height="500%" id="paint" style="border: 5px solid #ffff1c;"></canvas>
+                        <div class="embed-responsive embed-responsive-1by1 text-center">
+                                <canvas width="500%" height="500%" id="paint"
+                                        style="border: 5px solid #ffff1c;"></canvas>
 
-            </div>>
-            <!--   canvas end  -->
+                        </div>
+                        <!--   canvas end  -->
 
-        </div>
-        <div class="col-md-2">
-
-            <!-- ABC and 123 area starting  -->
-
-
-            <div class="container-fluid">
-
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">A</button>
-                        <button type="button" class="btn btn-default col-md-4">B</button>
-                        <button type="button" class="btn btn-default col-md-4">C</button>
-                    </div>
                 </div>
+                <div class="col-md-2">
 
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">D</button>
-                        <button type="button" class="btn btn-default col-md-4">E</button>
-                        <button type="button" class="btn btn-default col-md-4">F</button>
-                    </div>
+                        <!-- ABC and 123 area starting  -->
+
+
+                        <div class="container-fluid">
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('A')"
+                                                        class="btn btn-default col-md-4">A</button>
+                                                <button type="button" onclick="words('B')"
+                                                        class="btn btn-default col-md-4">B</button>
+                                                <button type="button" onclick="words('C')"
+                                                        class="btn btn-default col-md-4">C</button>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('D')"
+                                                        class="btn btn-default col-md-4">D</button>
+                                                <button type="button" onclick="words('E')"
+                                                        class="btn btn-default col-md-4">E</button>
+                                                <button type="button" onclick="words('F')"
+                                                        class="btn btn-default col-md-4">F</button>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('G')"
+                                                        class="btn btn-default col-md-4">G</button>
+                                                <button type="button" onclick="words('H')"
+                                                        class="btn btn-default col-md-4">H</button>
+                                                <button type="button" onclick="words('I')"
+                                                        class="btn btn-default col-md-4">I</button>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('J')"
+                                                        class="btn btn-default col-md-4">J</button>
+                                                <button type="button" onclick="words('K')"
+                                                        class="btn btn-default col-md-4">K</button>
+                                                <button type="button" onclick="words('L')"
+                                                        class="btn btn-default col-md-4">L</button>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('M')"
+                                                        class="btn btn-default col-md-4">M</button>
+                                                <button type="button" onclick="words('N')"
+                                                        class="btn btn-default col-md-4">N</button>
+                                                <button type="button" onclick="words('O')"
+                                                        class="btn btn-default col-md-4">O</button>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('P')"
+                                                        class="btn btn-default col-md-4">P</button>
+                                                <button type="button" onclick="words('Q')"
+                                                        class="btn btn-default col-md-4">Q</button>
+                                                <button type="button" onclick="words('R')"
+                                                        class="btn btn-default col-md-4">R</button>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('S')"
+                                                        class="btn btn-default col-md-4">S</button>
+                                                <button type="button" onclick="words('T')"
+                                                        class="btn btn-default col-md-4">T</button>
+                                                <button type="button" onclick="words('U')"
+                                                        class="btn btn-default col-md-4">U</button>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('V')"
+                                                        class="btn btn-default col-md-4">V</button>
+                                                <button type="button" onclick="words('W')"
+                                                        class="btn btn-default col-md-4">W</button>
+                                                <button type="button" onclick="words('X')"
+                                                        class="btn btn-default col-md-4">X</button>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('Y')"
+                                                        class="btn btn-default col-md-4">Y</button>
+                                                <button type="button" onclick="words('Z')"
+                                                        class="btn btn-default col-md-4">Z</button>
+                                                <!-- <button type="button" class="btn btn-default col-md-4">0</button> -->
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class="btn-group">
+                                                <button type="button" onclick="words('1')"
+                                                        class="btn btn-default col-md-4">1</button>
+                                                <button type="button" onclick="words('2')"
+                                                        class="btn btn-default col-md-4">2</button>
+                                                <button type="button" onclick="words('3')"
+                                                        class="btn btn-default col-md-4">3</button>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('4')"
+                                                        class="btn btn-default col-md-4">4</button>
+                                                <button type="button" onclick="words('5')"
+                                                        class="btn btn-default col-md-4">5</button>
+                                                <button type="button" onclick="words('6')"
+                                                        class="btn btn-default col-md-4">6</button>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('7')"
+                                                        class="btn btn-default col-md-4">7</button>
+                                                <button type="button" onclick="words('8')"
+                                                        class="btn btn-default col-md-4">8</button>
+                                                <button type="button" onclick="words('9')"
+                                                        class="btn btn-default col-md-4">9</button>
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class=" btn-group">
+                                                <button type="button" onclick="words('0')"
+                                                        class="btn btn-default col-md-4">0</button>
+                                                <!-- <button type="button" class="btn btn-default col-md-4">W</button> -->
+                                                <!-- <button type="button" class="btn btn-default col-md-4">X</button> -->
+                                        </div>
+                                </div>
+
+                        </div>
+
+
+
+                        <!-- ABC and 123 area ending   -->
                 </div>
-
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">G</button>
-                        <button type="button" class="btn btn-default col-md-4">H</button>
-                        <button type="button" class="btn btn-default col-md-4">I</button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">J</button>
-                        <button type="button" class="btn btn-default col-md-4">K</button>
-                        <button type="button" class="btn btn-default col-md-4">L</button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">M</button>
-                        <button type="button" class="btn btn-default col-md-4">N</button>
-                        <button type="button" class="btn btn-default col-md-4">O</button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">P</button>
-                        <button type="button" class="btn btn-default col-md-4">Q</button>
-                        <button type="button" class="btn btn-default col-md-4">R</button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">S</button>
-                        <button type="button" class="btn btn-default col-md-4">T</button>
-                        <button type="button" class="btn btn-default col-md-4">U</button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">V</button>
-                        <button type="button" class="btn btn-default col-md-4">W</button>
-                        <button type="button" class="btn btn-default col-md-4">X</button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">Y</button>
-                        <button type="button" class="btn btn-default col-md-4">Z</button>
-                        <!-- <button type="button" class="btn btn-default col-md-4">0</button> -->
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default col-md-4">1</button>
-                        <button type="button" class="btn btn-default col-md-4">2</button>
-                        <button type="button" class="btn btn-default col-md-4">3</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">4</button>
-                        <button type="button" class="btn btn-default col-md-4">5</button>
-                        <button type="button" class="btn btn-default col-md-4">6</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">7</button>
-                        <button type="button" class="btn btn-default col-md-4">8</button>
-                        <button type="button" class="btn btn-default col-md-4">9</button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class=" btn-group">
-                        <button type="button" class="btn btn-default col-md-4">0</button>
-                        <!-- <button type="button" class="btn btn-default col-md-4">W</button> -->
-                        <!-- <button type="button" class="btn btn-default col-md-4">X</button> -->
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <!-- ABC and 123 area ending   -->
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col">
-
-            <fieldset id="colorset">
-                <table>
-                    <tr>
-                        <td><button class="btn btn-default col-md-4" style="width: 100%; text-align: center;"
-                                onclick="fill()">Fill</button>
-                        <td><button style="background-color: #000000; height: 20px; width: 20px;"
-                                onclick="color('#000000')"></button>
-                        <td><button style="background-color: #B0171F; height: 20px; width: 20px;"
-                                onclick="color('#B0171F')"></button>
-                        <td><button style="background-color: #DA70D6; height: 20px; width: 20px;"
-                                onclick="color('#DA70D6')"></button>
-                        <td><button style="background-color: #8A2BE2; height: 20px; width: 20px;"
-                                onclick="color('#8A2BE2')"></button>
-                        <td><button style="background-color: #0000FF; height: 20px; width: 20px;"
-                                onclick="color('#0000FF')"></button>
-                        <td><button style="background-color: #4876FF; height: 20px; width: 20px;"
-                                onclick="color('#4876FF')"></button>
-                        <td><button style="background-color: #CAE1FF; height: 20px; width: 20px;"
-                                onclick="color('#CAE1FF')"></button>
-                        <td><button style="background-color: #6E7B8B; height: 20px; width: 20px;"
-                                onclick="color('#6E7B8B')"></button>
-                        <td><button style="background-color: #00C78C; height: 20px; width: 20px;"
-                                onclick="color('#00C78C')"></button>
-                        <td><button style="background-color: #00FA9A; height: 20px; width: 20px;"
-                                onclick="color('#00FA9A')"></button>
-                        <td><button style="background-color: #00FF7F; height: 20px; width: 20px;"
-                                onclick="color('#00FF7F')"></button>
-                        <td><button style="background-color: #00C957; height: 20px; width: 20px;"
-                                onclick="color('#00C957')"></button>
-                        <td><button style="background-color: #3D9140; height: 20px; width: 20px;"
-                                onclick="color('#3D9140')"></button>
-                        <td><button style="background-color: #32CD32; height: 20px; width: 20px;"
-                                onclick="color('#32CD32')"></button>
-                        <td><button style="background-color: #00EE00; height: 20px; width: 20px;"
-                                onclick="color('#00EE00')"></button>
-                        <td><button style="background-color: #008B00; height: 20px; width: 20px;"
-                                onclick="color('#008B00')"></button>
-                        <td><button style="background-color: #76EE00; height: 20px; width: 20px;"
-                                onclick="color('#76EE00')"></button>
-                        <td><button style="background-color: #CAFF70; height: 20px; width: 20px;"
-                                onclick="color('#CAFF70')"></button>
-                        <td><button style="background-color: #FFFF00; height: 20px; width: 20px;"
-                                onclick="color('#FFFF00')"></button>
-                        <td><button style="background-color: #CDCD00; height: 20px; width: 20px;"
-                                onclick="color('#CDCD00')"></button>
-                        <td><button style="background-color: #FFF68F; height: 20px; width: 20px;"
-                                onclick="color('#FFF68F')"></button>
-                        <td><button style="background-color: #FFFACD; height: 20px; width: 20px;"
-                                onclick="color('#FFFACD')"></button>
-                        <td><button style="background-color: #FFEC8B; height: 20px; width: 20px;"
-                                onclick="color('#FFEC8B')"></button>
-                        <td><button style="background-color: #FFD700; height: 20px; width: 20px;"
-                                onclick="color('#FFD700')"></button>
-                        <td><button style="background-color: #F5DEB3; height: 20px; width: 20px;"
-                                onclick="color('#F5DEB3')"></button>
-                        <td><button style="background-color: #FFE4B5; height: 20px; width: 20px;"
-                                onclick="color('#FFE4B5')"></button>
-                        <td><button style="background-color: #EECFA1; height: 20px; width: 20px;"
-                                onclick="color('#EECFA1')"></button>
-                        <td><button style="background-color: #FF9912; height: 20px; width: 20px;"
-                                onclick="color('#FF9912')"></button>
-                        <td><button style="background-color: #8E388E; height: 20px; width: 20px;"
-                                onclick="color('#8E388E')"></button>
-                        <td><button style="background-color: #7171C6; height: 20px; width: 20px;"
-                                onclick="color('#7171C6')"></button>
-                        <td><button style="background-color: #7D9EC0; height: 20px; width: 20px;"
-                                onclick="color('#7D9EC0')"></button>
-                        <td><button style="background-color: #388E8E; height: 20px; width: 20px;"
-                                onclick="color('#388E8E')"></button>
-
-                    </tr>
-                    <tr>
-                        <td><button class="btn btn-default col-md-4" style="width: 100%; text-align: center;"
-                                onclick="outline()">Outline</button>
-                        <td><button style="background-color: #71C671; height: 20px; width: 20px;"
-                                onclick="color('#71C671')"></button>
-                        <td><button style="background-color: #8E8E38; height: 20px; width: 20px;"
-                                onclick="color('#8E8E38')"></button>
-                        <td><button style="background-color: #C5C1AA; height: 20px; width: 20px;"
-                                onclick="color('#C5C1AA')"></button>
-                        <td><button style="background-color: #C67171; height: 20px; width: 20px;"
-                                onclick="color('#C67171')"></button>
-                        <td><button style="background-color: #555555; height: 20px; width: 20px;"
-                                onclick="color('#555555')"></button>
-                        <td><button style="background-color: #848484; height: 20px; width: 20px;"
-                                onclick="color('#848484')"></button>
-                        <td><button style="background-color: #F4F4F4; height: 20px; width: 20px;"
-                                onclick="color('#F4F4F4')"></button>
-                        <td><button style="background-color: #EE0000; height: 20px; width: 20px;"
-                                onclick="color('#EE0000')"></button>
-                        <td><button style="background-color: #FF4040; height: 20px; width: 20px;"
-                                onclick="color('#FF4040')"></button>
-                        <td><button style="background-color: #EE6363; height: 20px; width: 20px;"
-                                onclick="color('#EE6363')"></button>
-                        <td><button style="background-color: #FFC1C1; height: 20px; width: 20px;"
-                                onclick="color('#FFC1C1')"></button>
-                        <td><button style="background-color: #FF7256; height: 20px; width: 20px;"
-                                onclick="color('#FF7256')"></button>
-                        <td><button style="background-color: #FF4500; height: 20px; width: 20px;"
-                                onclick="color('#FF4500')"></button>
-                        <td><button style="background-color: #F4A460; height: 20px; width: 20px;"
-                                onclick="color('#F4A460')"></button>
-                        <td><button style="background-color: #FF8000; height: 20px; width: 20px;"
-                                onclick="color('FF8000')"></button>
-                        <td><button style="background-color: #FFD700; height: 20px; width: 20px;"
-                                onclick="color('#FFD700')"></button>
-                        <td><button style="background-color: #8B864E; height: 20px; width: 20px;"
-                                onclick="color('#8B864E')"></button>
-                        <td><button style="background-color: #9ACD32; height: 20px; width: 20px;"
-                                onclick="color('#9ACD32')"></button>
-                        <td><button style="background-color: #66CD00; height: 20px; width: 20px;"
-                                onclick="color('#66CD00')"></button>
-                        <td><button style="background-color: #BDFCC9; height: 20px; width: 20px;"
-                                onclick="color('#BDFCC9')"></button>
-                        <td><button style="background-color: #76EEC6; height: 20px; width: 20px;"
-                                onclick="color('#76EEC6')"></button>
-                        <td><button style="background-color: #40E0D0; height: 20px; width: 20px;"
-                                onclick="color('#40E0D0')"></button>
-                        <td><button style="background-color: #E0EEEE; height: 20px; width: 20px;"
-                                onclick="color('#E0EEEE')"></button>
-                        <td><button style="background-color: #98F5FF; height: 20px; width: 20px;"
-                                onclick="color('#98F5FF')"></button>
-                        <td><button style="background-color: #33A1C9; height: 20px; width: 20px;"
-                                onclick="color('#33A1C9')"></button>
-                        <td><button style="background-color: #F0F8FF; height: 20px; width: 20px;"
-                                onclick="color('#F0F8FF')"></button>
-                        <td><button style="background-color: #4682B4; height: 20px; width: 20px;"
-                                onclick="color('#4682B4')"></button>
-                        <td><button style="background-color: #C6E2FF; height: 20px; width: 20px;"
-                                onclick="color('#C6E2FF')"></button>
-                        <td><button style="background-color: #9B30FF; height: 20px; width: 20px;"
-                                onclick="color('#9B30FF')"></button>
-                        <td><button style="background-color: #EE82EE; height: 20px; width: 20px;"
-                                onclick="color('#EE82EE')"></button>
-                        <td><button style="background-color: #FFC0CB; height: 20px; width: 20px;"
-                                onclick="color('#FFC0CB')"></button>
-                        <td><button style="background-color: #7CFC00; height: 20px; width: 20px;"
-                                onclick="color('#7CFC00')"></button>
-                    </tr>
-                    <tr>
-                        <td><label>Line Width</label></td>
-                        <td><button class="btn btn-primary" id="pixel_plus" type="button"
-                                onclick="add_pixel()">+</button>
-                        </td>
-                        <td><button class="btn btn-primary" id="pixel_minus" type="button"
-                                onclick="reduce_pixel()">-</button>
-                        </td>
-                    </tr>
-                </table>
-                <label>file name </label><input id="fname" type="text"><button class="btn btn-primary" id="save"
-                    onclick="save()">Save</button>
-            </fieldset>
-
-
         </div>
 
-    </div>
+        <!-- 
+        <div class="row">
+                <div class="col">
+
+                        <fieldset id="colorset">
+                                <table>
+                                        <tr>
+                                                <td><button class="btn btn-default col-md-4"
+                                                                style="width: 100%; text-align: center;"
+                                                                onclick="fill()">Fill</button>
+                                                <td><button style="background-color: #000000; height: 20px; width: 20px;"
+                                                                onclick="color('#000000')"></button>
+                                                <td><button style="background-color: #B0171F; height: 20px; width: 20px;"
+                                                                onclick="color('#B0171F')"></button>
+                                                <td><button style="background-color: #DA70D6; height: 20px; width: 20px;"
+                                                                onclick="color('#DA70D6')"></button>
+                                                <td><button style="background-color: #8A2BE2; height: 20px; width: 20px;"
+                                                                onclick="color('#8A2BE2')"></button>
+                                                <td><button style="background-color: #0000FF; height: 20px; width: 20px;"
+                                                                onclick="color('#0000FF')"></button>
+                                                <td><button style="background-color: #4876FF; height: 20px; width: 20px;"
+                                                                onclick="color('#4876FF')"></button>
+                                                <td><button style="background-color: #CAE1FF; height: 20px; width: 20px;"
+                                                                onclick="color('#CAE1FF')"></button>
+                                                <td><button style="background-color: #6E7B8B; height: 20px; width: 20px;"
+                                                                onclick="color('#6E7B8B')"></button>
+                                                <td><button style="background-color: #00C78C; height: 20px; width: 20px;"
+                                                                onclick="color('#00C78C')"></button>
+                                                <td><button style="background-color: #00FA9A; height: 20px; width: 20px;"
+                                                                onclick="color('#00FA9A')"></button>
+                                                <td><button style="background-color: #00FF7F; height: 20px; width: 20px;"
+                                                                onclick="color('#00FF7F')"></button>
+                                                <td><button style="background-color: #00C957; height: 20px; width: 20px;"
+                                                                onclick="color('#00C957')"></button>
+                                                <td><button style="background-color: #3D9140; height: 20px; width: 20px;"
+                                                                onclick="color('#3D9140')"></button>
+                                                <td><button style="background-color: #32CD32; height: 20px; width: 20px;"
+                                                                onclick="color('#32CD32')"></button>
+                                                <td><button style="background-color: #00EE00; height: 20px; width: 20px;"
+                                                                onclick="color('#00EE00')"></button>
+                                                <td><button style="background-color: #008B00; height: 20px; width: 20px;"
+                                                                onclick="color('#008B00')"></button>
+                                                <td><button style="background-color: #76EE00; height: 20px; width: 20px;"
+                                                                onclick="color('#76EE00')"></button>
+                                                <td><button style="background-color: #CAFF70; height: 20px; width: 20px;"
+                                                                onclick="color('#CAFF70')"></button>
+                                                <td><button style="background-color: #FFFF00; height: 20px; width: 20px;"
+                                                                onclick="color('#FFFF00')"></button>
+                                                <td><button style="background-color: #CDCD00; height: 20px; width: 20px;"
+                                                                onclick="color('#CDCD00')"></button>
+                                                <td><button style="background-color: #FFF68F; height: 20px; width: 20px;"
+                                                                onclick="color('#FFF68F')"></button>
+                                                <td><button style="background-color: #FFFACD; height: 20px; width: 20px;"
+                                                                onclick="color('#FFFACD')"></button>
+                                                <td><button style="background-color: #FFEC8B; height: 20px; width: 20px;"
+                                                                onclick="color('#FFEC8B')"></button>
+                                                <td><button style="background-color: #FFD700; height: 20px; width: 20px;"
+                                                                onclick="color('#FFD700')"></button>
+                                                <td><button style="background-color: #F5DEB3; height: 20px; width: 20px;"
+                                                                onclick="color('#F5DEB3')"></button>
+                                                <td><button style="background-color: #FFE4B5; height: 20px; width: 20px;"
+                                                                onclick="color('#FFE4B5')"></button>
+                                                <td><button style="background-color: #EECFA1; height: 20px; width: 20px;"
+                                                                onclick="color('#EECFA1')"></button>
+                                                <td><button style="background-color: #FF9912; height: 20px; width: 20px;"
+                                                                onclick="color('#FF9912')"></button>
+                                                <td><button style="background-color: #8E388E; height: 20px; width: 20px;"
+                                                                onclick="color('#8E388E')"></button>
+                                                <td><button style="background-color: #7171C6; height: 20px; width: 20px;"
+                                                                onclick="color('#7171C6')"></button>
+                                                <td><button style="background-color: #7D9EC0; height: 20px; width: 20px;"
+                                                                onclick="color('#7D9EC0')"></button>
+                                                <td><button style="background-color: #388E8E; height: 20px; width: 20px;"
+                                                                onclick="color('#388E8E')"></button>
+
+                                        </tr>
+                                        <tr>
+                                                <td><button class="btn btn-default col-md-4"
+                                                                style="width: 100%; text-align: center;"
+                                                                onclick="outline()">Outline</button>
+                                                <td><button style="background-color: #71C671; height: 20px; width: 20px;"
+                                                                onclick="color('#71C671')"></button>
+                                                <td><button style="background-color: #8E8E38; height: 20px; width: 20px;"
+                                                                onclick="color('#8E8E38')"></button>
+                                                <td><button style="background-color: #C5C1AA; height: 20px; width: 20px;"
+                                                                onclick="color('#C5C1AA')"></button>
+                                                <td><button style="background-color: #C67171; height: 20px; width: 20px;"
+                                                                onclick="color('#C67171')"></button>
+                                                <td><button style="background-color: #555555; height: 20px; width: 20px;"
+                                                                onclick="color('#555555')"></button>
+                                                <td><button style="background-color: #848484; height: 20px; width: 20px;"
+                                                                onclick="color('#848484')"></button>
+                                                <td><button style="background-color: #F4F4F4; height: 20px; width: 20px;"
+                                                                onclick="color('#F4F4F4')"></button>
+                                                <td><button style="background-color: #EE0000; height: 20px; width: 20px;"
+                                                                onclick="color('#EE0000')"></button>
+                                                <td><button style="background-color: #FF4040; height: 20px; width: 20px;"
+                                                                onclick="color('#FF4040')"></button>
+                                                <td><button style="background-color: #EE6363; height: 20px; width: 20px;"
+                                                                onclick="color('#EE6363')"></button>
+                                                <td><button style="background-color: #FFC1C1; height: 20px; width: 20px;"
+                                                                onclick="color('#FFC1C1')"></button>
+                                                <td><button style="background-color: #FF7256; height: 20px; width: 20px;"
+                                                                onclick="color('#FF7256')"></button>
+                                                <td><button style="background-color: #FF4500; height: 20px; width: 20px;"
+                                                                onclick="color('#FF4500')"></button>
+                                                <td><button style="background-color: #F4A460; height: 20px; width: 20px;"
+                                                                onclick="color('#F4A460')"></button>
+                                                <td><button style="background-color: #FF8000; height: 20px; width: 20px;"
+                                                                onclick="color('FF8000')"></button>
+                                                <td><button style="background-color: #FFD700; height: 20px; width: 20px;"
+                                                                onclick="color('#FFD700')"></button>
+                                                <td><button style="background-color: #8B864E; height: 20px; width: 20px;"
+                                                                onclick="color('#8B864E')"></button>
+                                                <td><button style="background-color: #9ACD32; height: 20px; width: 20px;"
+                                                                onclick="color('#9ACD32')"></button>
+                                                <td><button style="background-color: #66CD00; height: 20px; width: 20px;"
+                                                                onclick="color('#66CD00')"></button>
+                                                <td><button style="background-color: #BDFCC9; height: 20px; width: 20px;"
+                                                                onclick="color('#BDFCC9')"></button>
+                                                <td><button style="background-color: #76EEC6; height: 20px; width: 20px;"
+                                                                onclick="color('#76EEC6')"></button>
+                                                <td><button style="background-color: #40E0D0; height: 20px; width: 20px;"
+                                                                onclick="color('#40E0D0')"></button>
+                                                <td><button style="background-color: #E0EEEE; height: 20px; width: 20px;"
+                                                                onclick="color('#E0EEEE')"></button>
+                                                <td><button style="background-color: #98F5FF; height: 20px; width: 20px;"
+                                                                onclick="color('#98F5FF')"></button>
+                                                <td><button style="background-color: #33A1C9; height: 20px; width: 20px;"
+                                                                onclick="color('#33A1C9')"></button>
+                                                <td><button style="background-color: #F0F8FF; height: 20px; width: 20px;"
+                                                                onclick="color('#F0F8FF')"></button>
+                                                <td><button style="background-color: #4682B4; height: 20px; width: 20px;"
+                                                                onclick="color('#4682B4')"></button>
+                                                <td><button style="background-color: #C6E2FF; height: 20px; width: 20px;"
+                                                                onclick="color('#C6E2FF')"></button>
+                                                <td><button style="background-color: #9B30FF; height: 20px; width: 20px;"
+                                                                onclick="color('#9B30FF')"></button>
+                                                <td><button style="background-color: #EE82EE; height: 20px; width: 20px;"
+                                                                onclick="color('#EE82EE')"></button>
+                                                <td><button style="background-color: #FFC0CB; height: 20px; width: 20px;"
+                                                                onclick="color('#FFC0CB')"></button>
+                                                <td><button style="background-color: #7CFC00; height: 20px; width: 20px;"
+                                                                onclick="color('#7CFC00')"></button>
+                                        </tr>
+                                        <tr>
+                                                <td><label>Line Width</label></td>
+                                                <td><button class="btn btn-primary" id="pixel_plus" type="button"
+                                                                onclick="add_pixel()">+</button>
+                                                </td>
+                                                <td><button class="btn btn-primary" id="pixel_minus" type="button"
+                                                                onclick="reduce_pixel()">-</button>
+                                                </td>
+                                        </tr>
+                                </table>
+                                <label>file name </label><input id="fname" type="text"><button class="btn btn-primary"
+                                        id="save" onclick="save()">Save</button>
+                        </fieldset>
+
+
+                </div>
+
+        </div> -->
+
+
+
 </div>
 
 
