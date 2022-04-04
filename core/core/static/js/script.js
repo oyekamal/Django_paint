@@ -10,7 +10,8 @@ var curX, curY, prevX, prevY;
 var hold = false;
 var fill_value = true, stroke_value = false;
 var canvas_data = { "pencil": [], "line": [], "rectangle": [], "circle": [], "eraser": [] };
-ctx.lineWidth = 2;
+ctx.lineWidth = 30;
+ctx.strokeStyle = '#33A1C9';
                         
 function color (color_value){
     ctx.strokeStyle = color_value;
@@ -39,7 +40,9 @@ function outline (){
 }
                
 function reset (){
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.lineWidth = 30;
+    ctx.strokeStyle = '#33A1C9';
+    ctx.clearRect(10, 10, canvas.width, canvas.height);
     canvas_data = { "pencil": [], "line": [], "rectangle": [], "circle": [], "eraser": [] };
 }
         
@@ -260,6 +263,17 @@ function save (){
     alert(filename + " saved");
     
 } 
+
+
+function imageWord(word){
+    reset();
+    pencil ();
+    // var img = document.createElement("./alphabets/A.jpeg");
+    var img = document.getElementById(word);
+    // img.setAttribute("width", "100");
+    // img.setAttribute("height", "100");
+    ctx.drawImage(img, 10, 10);
+}
 
 
 function words(word){
