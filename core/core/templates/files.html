@@ -1,20 +1,37 @@
 {% include "base.html" %}
-{% block content %}    
-<p><h2>Saved files</h2></p>
-    
-{% if files %}
-<ol>
-    {% for file in files %}
-        <li><p style="color: blue; cursor: pointer;">{{ file.name }}</p></li>       
-    {% endfor %}
-</ol>
-{% endif %}
-<form action="/search/" method="get">
-    <p><label>filename</label><input id="fname" type="text" name="filename">
-    <input type="submit" value="show"></p>
-</form>   
+{% block content %}
+
+<h2>Saved files</h2>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {% if files %}
+            <ol>
+                {% for file in files %}
+                <li>
+                    <p style="color: blue; cursor: pointer;">{{ file.name }}</p>
+                </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+        </div>
+        <div class="col">
+            <form action="/search/" method="get">
+                <p><label>filename</label><input id="fname" type="text" name="filename">
+                    <input type="submit" value="show">
+                </p>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
 
 {% load static %}
-    <script src="{% static 'js/files.js' %}"></script>
+<script src="{% static 'js/files.js' %}"></script>
 
 {% endblock %}

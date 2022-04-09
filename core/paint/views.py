@@ -18,15 +18,19 @@ def paint(request):
         file_data = Files(name=filename, image=data, canvas_image=image)
         file_data.save()
         return HttpResponseRedirect('/')
- 
-@csrf_exempt       
+
+
+@csrf_exempt
 def files(request):
     if request.method == 'GET':
         all_data = Files.objects.all()
-        return render(request, 'files.html', { 'files': all_data })
+        return render(request, 'files.html', {'files': all_data})
+
 
 def search(request):
     if 'filename' in request.GET:
         filename = request.GET['filename']
-        datafile = Files.objects.get(name=filename)
-        return render(request, 'search.html', { 'data': datafile.canvas_image, 'filename': filename })
+        datafile = Files.objects.filter(name=filename)
+        count = Files.objects.filter(name=filename).count()
+        # print(datafile.values_list())
+        return render(request, 'search.html', {'data': datafile, 'filename': filename, 'count': count})

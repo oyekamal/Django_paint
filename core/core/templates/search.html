@@ -1,11 +1,27 @@
 {% include "base.html" %}
 {% block content %}
-{% if data and filename %}
-    <p><h3> {{ filename }} </h3></p>
-    <canvas hidden id="paint" width="750" height="450" style="border: 5px solid #000000;"></canvas>
-    <button id="show" onclick="view('{{ data }}')">View</button></p>
-{% endif %}
-    
+
+<div class="container">
+
+    {% if data and filename %}
+    {% for each_data in data %}
+    <div class="row">
+
+        <div class="col">
+            <h3 style="width: 100%; text-align: center;"> {{ each_data.name }} </h3>
+            <canvas hidden id="paint" width="500%" height="500%" style="border: 5px solid #000000;"></canvas>
+            <button class="btn btn-primary" style="width: 100%; text-align: center;" id="show"
+                onclick="view('{{ each_data.canvas_image }}')">View</button>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
+
+
+</div>
+
 {% load static %}
-    <script src="{% static 'js/search.js' %}"></script>
+<script src="{% static 'js/search.js' %}"></script>
 {% endblock %}
