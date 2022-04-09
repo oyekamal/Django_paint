@@ -12,6 +12,9 @@ var fill_value = true, stroke_value = false;
 var canvas_data = { "pencil": [], "line": [], "rectangle": [], "circle": [], "eraser": [] };
 ctx.lineWidth = 30;
 ctx.strokeStyle = '#33A1C9';
+ctx.lineCap = "round";
+ctx.lineJoin = "round";
+pencil();
                         
 function color (color_value){
     ctx.strokeStyle = color_value;
