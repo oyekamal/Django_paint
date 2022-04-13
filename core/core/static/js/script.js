@@ -273,6 +273,8 @@ function imageWord(word){
     pencil ();
     // var img = document.createElement("./alphabets/A.jpeg");
     var img = document.getElementById(word);
+    var x = document.getElementById(word+"_Audio"); 
+    x.play()
     // img.setAttribute("width", "100");
     // img.setAttribute("height", "100");
     ctx.drawImage(img, 10, 10);
