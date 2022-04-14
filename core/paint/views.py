@@ -26,6 +26,12 @@ def files(request):
         all_data = Files.objects.all()
         return render(request, 'files.html', {'files': all_data})
 
+@csrf_exempt
+def game(request):
+    if request.method == 'GET':
+        # all_data = Files.objects.all()
+        return render(request, 'game.html')
+
 
 def search(request):
     if 'filename' in request.GET:

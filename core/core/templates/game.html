@@ -1,0 +1,52 @@
+{% include "base.html" %}
+{% block content %}
+
+
+{% load static %}
+<h2>Game</h2>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <h2>Drag and Drop</h2>
+            <p>Drag the image back and forth between the two div elements.</p>
+
+
+
+            <div  style=" margin: 10px; padding: 10px;border: 1px solid black;" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src={% static "alphabets/A_500x500.png" %} draggable="true" ondragstart="drag(event)" id="drag1"
+                    width="88" height="31">
+            </div>
+
+            <div style=" margin: 10px; padding: 10px;border: 1px solid black;" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <!-- {% if files %}
+            <ol>
+                {% for file in files %}
+                <li>
+                    <p style="color: blue; cursor: pointer;">{{ file.name }}</p>
+                </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+        </div>
+        <div class="col">
+            <form action="/search/" method="get">
+                <p><label>filename</label><input id="fname" type="text" name="filename">
+                    <input type="submit" value="show">
+                </p>
+            </form> -->
+        </div>
+
+    </div>
+</div>
+
+
+
+
+{% load static %}
+<script src="{% static 'js/game.js' %}"></script>
+
+{% endblock %}
