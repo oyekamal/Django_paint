@@ -42,6 +42,5 @@ function drop(ev) {
         console.log(" ----- id ", id_)
         document.getElementById(id_).style.background = "#230000";
     }
-    //"alphabets/{}_500x500.png" 
     ev.target.appendChild(document.getElementById(data));
 }
