@@ -6,16 +6,16 @@
 <h2>Game</h2>
 
 
-
+<h2>Drag and Drop Game</h2>
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12 text-center">
 
-        <h2>Drag and Drop</h2>
-        <p>Drag the image back and forth between the two div elements.</p>
+        
+        <!-- <p>Drag the image back and forth between the two div elements.</p> -->
 
 
 
-        <div style=" margin: 10px; padding: 10px;border: 2px solid black;" id="div1" ondrop="drop(event)"
+        <div style="align-items: center; margin: 10px; padding: 10px;border: 2px solid black;" id="div1" ondrop="drop(event)"
             ondragover="allowDrop(event)">
             <img src={% static question_letter %} draggable="true" ondragstart="drag(event)" id={% static question_letter %}>
         </div>
@@ -33,7 +33,7 @@
                         ondragover="allowDrop(event)">
                     </div> -->
 
-    <div class="col-4">
+    <div class="col-4 text-center">
         <div style=" margin: 10px; padding: 10px;border: 1px solid black;" id={% static choice %}
             ondrop="drop(event)" ondragover="allowDrop(event)">
             <!-- <img id="dropimage" src= style="width: 100px; height:  100px;"> -->
