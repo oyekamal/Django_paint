@@ -42,5 +42,11 @@ function drop(ev) {
         console.log(" ----- id ", id_)
         document.getElementById(id_).style.background = "#230000";
     }
+
+
     ev.target.appendChild(document.getElementById(data));
+
+    setTimeout(function(){window.top.location.reload()} , 1000);
+
+    
 }
