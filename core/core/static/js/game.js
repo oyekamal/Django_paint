@@ -15,12 +15,33 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
+    // console.log("firstElementChild ----____----", ev.target.firstElementChild.src);
 
-    // console.log("originalTarget ----____----", ev.originalTarget);
-    // console.log("target ----____----", ev.target);
-    console.log("firstElementChild ----____----", ev.target);
-    // console.log("nextElementSibling ----____----", ev.target.nextElementSibling);
+
     console.log("id <<<<<< ",data);
-    console.log("id ---- " + document.getElementById(data));
+    var incoming_letter_list = data.split(".")[0].split('/')
+    console.log(incoming_letter_list)
+    var incoming_letter = incoming_letter_list[incoming_letter_list.length-1]
+    console.log(incoming_letter)
+    // var present_letter = ev.target.firstElementChild.src
+    var present_letter_list = ev.target.firstElementChild.src.split(".")[0].split("/");
+    console.log(present_letter_list)
+    var present_letter = present_letter_list[present_letter_list.length-1]
+
+    console.log(present_letter)
+
+    if (present_letter == incoming_letter){
+        console.log("Yes yo win ");
+
+        var id_ = "/static/alphabets/"+ present_letter +".png"
+        console.log(" ----- id ", id_)
+        document.getElementById(id_).style.background = "#235423";
+    }
+    else{
+        var id_ = "/static/alphabets/"+ present_letter +".png"
+        console.log(" ----- id ", id_)
+        document.getElementById(id_).style.background = "#230000";
+    }
+    //"alphabets/{}_500x500.png" 
     ev.target.appendChild(document.getElementById(data));
 }

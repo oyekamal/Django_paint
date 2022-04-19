@@ -35,10 +35,10 @@
                         ondragover="allowDrop(event)">
                     </div> -->
                 <div class="col">
-                    <div style=" margin: 10px; padding: 10px;border: 1px solid black;" id="div2" ondrop="drop(event)"
+                    <div style=" margin: 10px; padding: 10px;border: 1px solid black;" id={% static choice %} ondrop="drop(event)"
                         ondragover="allowDrop(event)">
                         <!-- <img id="dropimage" src= style="width: 100px; height:  100px;"> -->
-                        <img id="dropimage" src={% static choice %} style="width: 100px; height:  100px;">
+                        <img  src={% static choice %} style="width: 100px; height:  100px;">
                     </div>
                 </div>
             </div>
