@@ -8,40 +8,43 @@
 
 <h2>Drag and Drop Game</h2>
 <div class="row">
-    <div class="col-lg-12 text-center">
+    <!-- <div class="col-lg-4 ">
 
-        
-        <!-- <p>Drag the image back and forth between the two div elements.</p> -->
-
-
-
-        <div style="align-items: center; margin: 10px; padding: 10px;border: 2px solid black;" id="div1" ondrop="drop(event)"
-            ondragover="allowDrop(event)">
-            <img src={% static question_letter %} draggable="true" ondragstart="drag(event)" id={% static question_letter %}>
-        </div>
-    </div>
+    </div> -->
+    <div class="col-lg-4 text-center m-auto">
 
 
 
-</div>
-</div>
-
-<div class="row">
-
-{% for index,choice in sample_list %}
-<!-- <div class="col" style="border: 5px solid  #dddcdc;" id="div2" ondrop="drop(event)"
-                        ondragover="allowDrop(event)">
-                    </div> -->
-
-    <div class="col-4 text-center">
-        <div style=" margin: 10px; padding: 10px;border: 1px solid black;" id={% static choice %}
+        <div style="align-items: center; margin: 10px; padding: 10px;border: 2px solid black;" id="div1"
             ondrop="drop(event)" ondragover="allowDrop(event)">
-            <!-- <img id="dropimage" src= style="width: 100px; height:  100px;"> -->
-            <img src={% static choice %} style="width: 100px; height:  100px;">
+            <img style="width: 150px; height: 150px;" src={% static question_letter %} draggable="true"
+                ondragstart="drag(event)" id={% static question_letter %}>
+        </div>
+    </div>
+    <!-- <div class="col-lg-4 ">
+
+    </div> -->
+
+
+
+</div>
+</div>
+
+
+<div class="row mt-5">
+
+    {% for index,choice in sample_list %}
+
+
+    <div class="col-5  m-auto">
+        <div class="card">
+            <div class="card-body" style=" margin: 10px; padding: 10px;border: 1px solid black;" id={% static choice %} ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src={% static choice %} style="width: 200px; height:  200px;" >
+            </div>
         </div>
     </div>
 
-{% endfor %}
+    {% endfor %}
 </div>
 
 
