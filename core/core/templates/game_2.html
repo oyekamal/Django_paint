@@ -6,12 +6,12 @@
 <h2>Game</h2>
 
 
-<h2>Drag and Drop Game</h2>
+<h2>Drag and Drop Game 2</h2>
 <div class="row">
     <!-- <div class="col-lg-4 ">
 
     </div> -->
-    <div class="col-lg-4 text-center m-auto">
+    <div class="col-lg-4 text-center m-auto" >
 
 
 
@@ -31,19 +31,17 @@
 </div>
 
 
-<div class="row mt-5">
+<div class="row mt-5" style="align-items: center; margin: 10px; padding: 10px;border: 2px solid black;  background-size: cover; background-repeat: no-repeat; background-image:url('https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'); ">
 
     {% for index,choice in sample_list %}
 
 
-    <div class="col-5  m-auto">
-        <div class="card">
-            <div class="card-body" style=" margin: 10px; padding: 10px;border: 1px solid black;" id={% static choice %} ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="col-5  m-auto" >
+            <div style=" margin: 10px; padding: 10px;border: 1px solid black;" id={% static choice %} ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img src={% static choice %} style="width: 200px; height:  200px;" >
                 <!-- <span  >Drag here</span> -->
             
             </div>
-        </div>
     </div>
 
     {% endfor %}

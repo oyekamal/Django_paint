@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from paint.views import paint, files, search, game
+from paint.views import paint, files, search, game,game_2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", paint),
     path("files/", files),
     path("game/", game),
+    path("game_2/", game_2),
     path("search/", search)
 ]
