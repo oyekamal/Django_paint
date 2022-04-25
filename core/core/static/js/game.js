@@ -35,12 +35,12 @@ function drop(ev) {
 
         var id_ = "/static/alphabets/"+ present_letter +".png"
         console.log(" ----- id ", id_)
-        document.getElementById(id_).style.background = "#235423";
+        document.getElementById(id_).style.background = "DodgerBlue";
     }
     else{
         var id_ = "/static/alphabets/"+ present_letter +".png"
         console.log(" ----- id ", id_)
-        document.getElementById(id_).style.background = "#230000";
+        document.getElementById(id_).style.background = "#ff6347";
     }
 
 
