@@ -31,21 +31,26 @@
 </div>
 
 
-<div class="row mt-5" style="align-items: center; margin: 10px; padding: 10px;border: 2px solid black;  background-size: cover; background-repeat: no-repeat; background-image:url('https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'); ">
+<div id="choice" class="row mt-5" style="width: 100%; height:  800px; align-items: center; margin: 10px; padding: 10px;border: 2px solid black;  background-size: cover; background-repeat: no-repeat; background-image:url('https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'); ">
 
     {% for index,choice in sample_list %}
 
 
-    <div class="col-5  m-auto" >
+    <div style="width:250px; height:250px; min-width: 50px; min-height: 50px;  background: #e00;   position: absolute;   top: 1000px; left: 1000px; " >
             <div style=" margin: 10px; padding: 10px;border: 1px solid black;" id={% static choice %} ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img src={% static choice %} style="width: 200px; height:  200px;" >
-                <!-- <span  >Drag here</span> -->
             
             </div>
     </div>
 
     {% endfor %}
 </div>
+
+<!-- 
+<div style="width:100px; height:100px; min-width: 50px; min-height: 50px;  background: #e00;   position: absolute;   top: 100px; left: 100px;" >i'm a 1</div>
+<div style="width:100px; height:100px; min-width: 50px; min-height: 50px;  background: #e00;   position: absolute;   top: 100px; left: 100px;">i'm a 3</div>
+<div style="width:100px; height:100px; min-width: 50px; min-height: 50px;  background: #e00;   position: absolute;   top: 100px; left: 100px;">i'm a 2</div>
+<div style="width:100px; height:100px; min-width: 50px; min-height: 50px;  background: #e00;   position: absolute;   top: 100px; left: 100px;">i'm a 4</div> -->
 
 
 
@@ -67,7 +72,7 @@
 
 
 {% load static %}
-<script src="{% static 'js/game.js' %}"></script>
+<script src="{% static 'js/game_2.js' %}"></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
 {% endblock %}
