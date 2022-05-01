@@ -1,18 +1,20 @@
 var drag_str = "";
 var drop_str = "";
 
-function allowDrop(ev) {
+function allowDrop1(ev) {
     ev.preventDefault();
+  
 }
 
-function drag(ev) {
-    console.log("drag ____before", ev.target.id)
+function drag1(ev) {
+  
+    console.log("drag ____before gam1", ev.target.id)
     ev.dataTransfer.setData("text", ev.target.id);
 
 }
     
 
-function drop(ev) {
+function drop1(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     // console.log("firstElementChild ----____----", ev.target.firstElementChild.src);
@@ -33,20 +35,24 @@ function drop(ev) {
     if (present_letter == incoming_letter){
         console.log("Yes yo win ");
 
-        var id_ = "/static/alphabets/"+ present_letter +".png"
-        console.log(" ----- id ", id_)
+        var id_ = "/static/alphabets/"+ incoming_letter +".png"
+        console.log(" ----- id same ", id_)
         document.getElementById(id_).style.background = "DodgerBlue";
+       
+
+        
+     
     }
     else{
         var id_ = "/static/alphabets/"+ present_letter +".png"
-        console.log(" ----- id ", id_)
+        console.log(" ----- id dufferent", id_)
         document.getElementById(id_).style.background = "#ff6347";
     }
 
 
     ev.target.appendChild(document.getElementById(data));
 
-    setTimeout(function(){window.top.location.reload()} , 1000);
+    // setTimeout(function(){window.top.location.reload()} , 1000);
 
     
 }

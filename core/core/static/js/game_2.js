@@ -73,6 +73,7 @@ for ( var i=0; i < divs.length; i++ ) {
     // update top and left position
     thisDiv.style.top = randomTop +"px";
     thisDiv.style.left = randomLeft +"px";
+    thisDiv.style.right= 20 + 'px'
     
 }
 

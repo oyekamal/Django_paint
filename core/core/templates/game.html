@@ -3,8 +3,20 @@
 
 
 {% load static %}
+ <div class="row">
+     <div class="col-md-12 bg-dark text-light text-center">
+        <h2>Drag and Drop letter</h2>
 
-<h2>Drag and Drop letter</h2>
+     </div>
+ </div>
+
+<div class="row mt-2">
+    <div class="col-md-4 m-auto mb-2 text-center">
+        <button class="btn btn-primary" aria-hidden="true" onclick="window.top.location.reload()" >Refresh</button>
+    </div>
+    
+</div>
+
 <div class="row">
     <!-- <div class="col-lg-4 ">
 
@@ -13,13 +25,14 @@
 
 
         <div class="card">
-            <div style="align-items: center; margin: 10px; padding: 10px;border: 2px solid black;" id="div1"
-                ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div style="align-items: center; margin: 10px; padding: 10px;border: 2px solid black; border-radius: 10px;" 
+                ondrop="drop1(event)" ondragover="allowDrop1(event)">
                 <img style="width: 150px; height: 150px;" src={% static question_letter %} draggable="true"
-                    ondragstart="drag(event)" id={% static question_letter %}>
+                    ondragstart="drag1(event)" >
             </div>
         </div>
     </div>
+
     <!-- <div class="col-lg-4 ">
 
     </div> -->
@@ -27,6 +40,7 @@
 
 
 </div>
+
 </div>
 
 
@@ -35,11 +49,11 @@
     {% for index,choice in sample_list %}
 
 
-    <div class="col-5  m-auto">
+    <div class="col-3  m-auto">
         <div class="card">
-            <div class="card-body" style=" margin: 10px; padding: 10px;border: 1px solid black;" id={% static choice %}
-                ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src={% static choice %} style="width: 150px; height:  150px;">
+            <div class="card-body" style=" margin: 10px; padding: 10px;border: 1px solid black; border-radius: 10px;" id={% static choice %}
+                ondrop="drop1(event)" ondragover="allowDrop1(event)">
+                <img src={% static choice %} style="width: 150px; height:  150px;" >
                 <span>Drag here</span>
 
             </div>
@@ -47,6 +61,7 @@
     </div>
 
     {% endfor %}
+   
 </div>
 
 
