@@ -8,8 +8,8 @@ function allowDrop1(ev) {
 
 function drag1(ev) {
   
-    console.log("drag ____before gam1", ev.target.id)
-    ev.dataTransfer.setData("text", ev.target.id);
+    console.log("drag ____before gam1", ev.target.src)
+    ev.dataTransfer.setData("text", ev.target.src);
 
 }
     
@@ -35,9 +35,9 @@ function drop1(ev) {
     if (present_letter == incoming_letter){
         console.log("Yes yo win ");
 
-        var id_ = "/static/alphabets/"+ incoming_letter +".png"
+        var id_1 = "/static/alphabets/"+ present_letter +".png"
         console.log(" ----- id same ", id_)
-        document.getElementById(id_).style.background = "DodgerBlue";
+        document.getElementById(id_1).style.background = "DodgerBlue";
        
 
         
