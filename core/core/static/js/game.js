@@ -37,7 +37,7 @@ function drop1(ev) {
 
         var id_1 = "/static/alphabets/"+ present_letter +".png"
         console.log(" ----- id same ", id_)
-        document.getElementById(id_1).style.background = "DodgerBlue";
+        document.getElementById(id_1).style.background = "#90EE90";
        
 
         
@@ -46,7 +46,7 @@ function drop1(ev) {
     else{
         var id_ = "/static/alphabets/"+ present_letter +".png"
         console.log(" ----- id dufferent", id_)
-        document.getElementById(id_).style.background = "#ff6347";
+        document.getElementById(id_).style.background = "#ffcccb";
     }
 
 

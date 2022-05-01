@@ -6,8 +6,8 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-    console.log("drag ____before", ev.target.id)
-    ev.dataTransfer.setData("text", ev.target.id);
+    console.log("drag ____before", ev.target.src)
+    ev.dataTransfer.setData("text", ev.target.src);
 
 }
     
@@ -35,12 +35,12 @@ function drop(ev) {
 
         var id_ = "/static/alphabets/"+ present_letter +".png"
         console.log(" ----- id ", id_)
-        document.getElementById(id_).style.background = "DodgerBlue";
+        document.getElementById(id_).style.background = "#90EE90";
     }
     else{
         var id_ = "/static/alphabets/"+ present_letter +".png"
         console.log(" ----- id ", id_)
-        document.getElementById(id_).style.background = "#ff6347";
+        document.getElementById(id_).style.background = "#ffcccb";
     }
 
 
