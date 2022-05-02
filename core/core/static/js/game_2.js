@@ -53,7 +53,13 @@ function drop(ev) {
 
 // collect all the divs
 var divs = document.getElementsByTagName('div');
+console.log("length---", divs.length)
+
 var divs_choice = document.getElementById('choice');
+number = Math.trunc(getRandomNumber(1,13))
+image_name = "url('/static/alphabets/cartoon_"+ number +".jpg')"; 
+console.log("image ",image_name)
+divs_choice.style.backgroundImage = image_name; 
 // get window width and height
 var winWidth = divs_choice.offsetWidth;
 var winHeight = divs_choice.offsetHeight;
@@ -68,12 +74,18 @@ for ( var i=0; i < divs.length; i++ ) {
     
     // get random numbers for each element
     randomTop = getRandomNumber(500, winHeight);
-    randomLeft = getRandomNumber(0, winWidth);
+    randomLeft = getRandomNumber(0, winWidth-300);
+    
+    
+    console.log("----------------------------------------------")
     
     // update top and left position
     thisDiv.style.top = randomTop +"px";
     thisDiv.style.left = randomLeft +"px";
-    thisDiv.style.right= 20 + 'px'
+    // thisDiv.style.right= 20 + 'px'
+    console.log(randomTop);
+    console.log(randomLeft);
+    console.log("----------------------------------------------")
     
 }
 
