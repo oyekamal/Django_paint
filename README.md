@@ -9,7 +9,12 @@ Make sure you have python3
 
 ```sh
 $ python3 -m venv venv
-$ source env/bin/activate
+$ source venv/bin/activate
+```
+
+if you still have the venv created you dont need to create it again just activate the environment.
+```sh
+$ source venv/bin/activate
 ```
 
 Go inside the folder using cd command and find requirements.txt file
